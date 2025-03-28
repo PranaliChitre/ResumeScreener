@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screening</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>AI-Powered Resume Screening</h2>
+        
+        <!-- Job Criteria Input -->
+        <div class="input-section">
+            <label for="job-description">Job Description:</label>
+            <textarea id="job-description" placeholder="Enter job details..." required></textarea>
+
+            <label for="required-skills">Required Skills (comma-separated):</label>
+            <input type="text" id="required-skills" placeholder="Python, Machine Learning, NLP" required>
+
+            <label for="min-marks">Minimum Marks (CGPA/SGPA):</label>
+            <input type="number" id="min-marks" step="0.1" placeholder="7.0" required>
+
+            <label for="num-candidates">Number of Candidates to Hire:</label>
+            <input type="number" id="num-candidates" min="1" placeholder="5" required>
+
+            <label for="resume-upload">Upload Resumes (PDF Only):</label>
+            <input type="file" id="resume-upload" multiple accept=".pdf">
+            
+            <button onclick="processResumes()">Analyze Resumes</button>
+        </div>
+
+        <!-- Results Display -->
+        <div class="output-section">
+            <h3>Screening Results:</h3>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
